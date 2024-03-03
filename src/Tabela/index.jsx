@@ -33,7 +33,7 @@ function Tabela({imcValor}) {
                         </tr>
                     </thead>
                     <tbody>
-                            <tr id="linha1" className={imcValor < 18.5 ? 'table-danger' : ''}>
+                            <tr id="linha1" className={imcValor < 18.5 ? 'table-warning' : ''}>
                             <td>
                                 Menor que 18,5
                             </td>
@@ -44,7 +44,7 @@ function Tabela({imcValor}) {
                                 0
                             </td>
                         </tr>
-                        <tr id="linha2" className={imcValor > 18.5 & imcValor < 25 ? 'table-danger' : ''}>
+                        <tr id="linha2" className={imcValor > 18.5 & imcValor < 25 ? 'table-success' : ''}>
                             <td>
                                 Entre 18,5 e 24,9
                             </td>
@@ -55,7 +55,7 @@ function Tabela({imcValor}) {
                                 0
                             </td>
                         </tr>
-                        <tr id="linha3" className={imcValor > 25 & imcValor < 30 ? 'table-danger' : ''}>
+                        <tr id="linha3" className={imcValor > 25 & imcValor < 30 ? 'table-warning' : ''}>
                             <td>
                                 Entre 25,0 e 29,9
                             </td>

@@ -6,19 +6,14 @@ function Formulario() {
     const [peso, setPeso] = useState(0)
     const [altura, setAltura] = useState(0)
     const [valor, setValor] = useState(false)
-    const [cont, setCont] = useState(0)
     const [imcValor, setImcValor] = useState()
 
     useEffect(() => {
         if (peso != 0 & altura != 0) {
             setImcValor(imc(peso, altura))
+            setValor(true)
         }
     }, [altura, peso])
-    
-    if (cont === 2) {
-        setValor(true)
-        setCont(0)
-    }
 
     function imc(peso, altura) {
         let alturaM = altura / 100
@@ -33,13 +28,13 @@ function Formulario() {
                         <label>
                             Digite sua altura
                         </label>
-                        <input onBlur={e => { setAltura(e.target.value), setCont(cont + 1) }} className="form-control mb-2 w-50" type="number" placeholder="Cm" />
+                        <input onBlur={e => { setAltura(e.target.value)}} className="form-control mb-2 w-50" type="number" placeholder="Cm" />
                     </div>
                     <div className="form-control w-50 d-flex flex-column align-items-center rounded-5 mb-3">
                         <label>
                             Digite seu peso
                         </label>
-                        <input onBlur={e => { setPeso(e.target.value), setCont(cont + 1) }} className="form-control mb-2 w-50" type="number" placeholder="Kg" />
+                        <input onBlur={e => { setPeso(e.target.value)}} className="form-control mb-2 w-50" type="number" placeholder="Kg" />
                     </div>
                     {valor && (
                         <div className="form-control w-50 d-flex flex-column align-items-center rounded-5 p-4">
