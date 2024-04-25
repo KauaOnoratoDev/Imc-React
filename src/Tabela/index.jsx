@@ -1,20 +1,5 @@
-import { useEffect, useState } from "react"
-
-function Tabela({imcValor}) {
-    const [num1, setNum1] = useState('')
-    const [num2, setNum2] = useState('')
-    const [num3, setNum3] = useState('')
-    const [num4, setNum4] = useState('')
-    const [num5, setNum5] = useState('')
-
-    useEffect(() => {
-        setNum1(document.querySelector('#linha1'))
-        setNum2(document.querySelector('#linha2'))
-        setNum3(document.querySelector('#linha3'))
-        setNum4(document.querySelector('#linha4'))
-        setNum5(document.querySelector('#linha5'))
-
-}, [imcValor])
+// eslint-disable-next-line react/prop-types
+function Tabela({ imcValor }) {
 
     return (
         <div className="container mt-5">
